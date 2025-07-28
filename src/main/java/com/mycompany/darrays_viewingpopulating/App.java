@@ -11,7 +11,9 @@ public class App
         You are supposed to store the attendance of students of 3 grades.
         Grade 9, 10 and 11. There are total of 3 grades and 5 days of records
         that you need to enter in the array. The array holds the total number of 
-        students present each day of the week. */ 
+        students present each day of the week. 
+        Rows (groups) = Grades
+        Columns (total elements in each grp) = 5 days*/ 
         int[][] attendance = {
             {25, 27, 26, 28, 29},  
             {22, 24, 23, 25, 26},
@@ -36,6 +38,12 @@ public class App
         }
         System.out.println();
         
+        //Recap of view elements in 1D arrays
+        for (int i = 0; i < totalStudents.length; i++) 
+        {
+            System.out.println("Day " + (i + 1) + " attendance: " + totalStudents[i]);
+        }
+
         /* Lets see how we can view 2D arrays elements 
         Outter for loop iterates over each row (grade) */
         for (int i = 0; i < attendance.length;)
@@ -51,6 +59,7 @@ public class App
             System.out.println(); // Move to next line after each class
             i++; //go to the next row 
         }
+        
         /*
         Activity: Weekly Sales Tracking for Stores
 
@@ -66,6 +75,8 @@ public class App
         
         3. - Print the number of days recorded for each store.
            - Print the sales for each store, day by day (print out which day the sales are being printed out for and which store)
+           - Calculate and print the total sales for each store (sum of all days).
+           - Calculate and print the average sales for each store 
         */
           int[][] weeklySales = {
             {10, 12, 15, 20, 18, 22, 25},  // Store 1
@@ -74,7 +85,7 @@ public class App
             {7, 10, 14, 16, 19, 21, 22}    // Store 4
         };
           
-        // 2. Print the number of days recorded for each store
+        //2. Print the number of days recorded for each store
         for (int i = 0; i < weeklySales.length; i++)
         {
             System.out.println("Store " + (i + 1) + " has sales recorded for " + weeklySales[i].length + " days.");
@@ -92,6 +103,21 @@ public class App
             System.out.println();
         }
         System.out.println();
+        
+        //4. Calculate and print total and average sales for each store
+        // Calculate and print total and average sales for each store
+        for (int i = 0; i < weeklySales.length; i++) 
+        {
+            int storeTotal = 0;
+            for (int j = 0; j < weeklySales[i].length; j++) 
+            {
+                storeTotal += weeklySales[i][j];  // Sum sales for the current store
+            }
+            double storeAverage = (double) storeTotal / weeklySales[i].length;  // Calculate average sales
+            
+            System.out.println("Total sales for Store " + (i + 1) + ": " + storeTotal);
+            System.out.print("Average sales for Store:" + (i + 1) + ": " + storeAverage);
+        }
 //        int [][] attendance2 = new int[3][5];
 //        Scanner scanner = new Scanner(System.in);
 //        
