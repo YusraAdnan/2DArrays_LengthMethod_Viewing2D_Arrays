@@ -74,8 +74,7 @@ public class App
         
         3. - Print the number of days recorded for each store.
            - Print the sales for each store, day by day (print out which day the sales are being printed out for and which store)
-           - Calculate and print the total sales for each store (sum of all days).
-           - Calculate and print the average sales for each store 
+          
         */
           int[][] weeklySales = {
             {10, 12, 15, 20, 18, 22, 25},  // Store 1
@@ -102,21 +101,5 @@ public class App
             System.out.println();
         }
         System.out.println();
-        
-        //4. Calculate and print total and average sales for each store
-        // Calculate and print total and average sales for each store
-        for (int i = 0; i < weeklySales.length; i++) 
-        {
-            int storeTotal = 0;
-            for (int j = 0; j < weeklySales[i].length; j++) 
-            {
-                storeTotal += weeklySales[i][j];  // Sum sales for the current store
-            }
-            double storeAverage = (double) storeTotal / weeklySales[i].length;  // Calculate average sales
-            
-            System.out.println("Total sales for Store " + (i + 1) + ": " + storeTotal);
-            System.out.print("Average sales for Store:" + (i + 1) + ": " + storeAverage);
-        }
-        
     }
 }
