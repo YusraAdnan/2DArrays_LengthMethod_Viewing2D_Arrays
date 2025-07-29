@@ -118,25 +118,6 @@ public class App
             System.out.println("Total sales for Store " + (i + 1) + ": " + storeTotal);
             System.out.print("Average sales for Store:" + (i + 1) + ": " + storeAverage);
         }
-//        int [][] attendance2 = new int[3][5];
-//        Scanner scanner = new Scanner(System.in);
-//        
-//        for (int i = 0; i < attendance2.length;) 
-//        {    
-//            System.out.println("Enter attendance for grade: " + (i+9));
-//            // Iterate over each row (grade)
-//            for (int j = 0; j < attendance2[i].length;) 
-//            {
-//                System.out.print("Enter the attendance for day " + (j+1) + ": ");
-//                 attendance2[i][j] = scanner.nextInt();
-//                j++;
-//            }
-//            System.out.println(); // Move to next line after each class
-//            i++;
-//        }
-//        
-//        
-        /*Look at textbook example for more work for students*/
         
     }
 }
