@@ -59,7 +59,6 @@ public class App
             System.out.println(); // Move to next line after each class
             i++; //go to the next row 
         }
-        
         /*
         Activity: Weekly Sales Tracking for Stores
 
